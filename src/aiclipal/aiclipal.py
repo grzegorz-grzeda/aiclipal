@@ -97,6 +97,7 @@ def respond_to_question(response, save_to_file, dont_add_front_matter, front_mat
         if not dont_add_front_matter:
             front_matter, title, date = ask_for_front_matter(front_matter_time)
             title = title.replace(" ", "-")
+            title = title.replace("/", "-")
             title = title.lower()
             if title and date:
                 file_name = f"{date}-{title}.md"
