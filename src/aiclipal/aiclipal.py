@@ -13,10 +13,10 @@ DEFAULT_RESPONSE_FILE_NAME = "response.md"
 class Defaults:
     def __init__(self):
         load_dotenv()
-        self.api_key = environ.get('AI_ASSISTANT_OPENAI_API_KEY')
-        self.role = environ.get('AI_ASSISTANT_OPENAI_ROLE')
-        self.model = environ.get('AI_ASSISTANT_OPENAI_MODEL')
-        self.fron_matter_time = environ.get('AI_ASSISTANT_FRONT_MATTER_TIME')
+        self.api_key = environ.get('AI_CLI_PAL_OPENAI_API_KEY')
+        self.role = environ.get('AI_CLI_PAL_OPENAI_ROLE')
+        self.model = environ.get('AI_CLI_PAL_OPENAI_MODEL')
+        self.fron_matter_time = environ.get('AI_CLI_PAL_FRONT_MATTER_TIME')
         if self.role is None:
             self.role = SYSTEM_ROLE
         if self.model is None:
@@ -113,7 +113,7 @@ def main():
     try:
         default_settings = Defaults()
         args = parse_args(default_settings)
-        vt100logging_init('ai-assistant', is_verbose=args.verbose)
+        vt100logging_init('ai-cli-pal', is_verbose=args.verbose)
         print("Welcome to the your friendly AI assistant.")
         D(f"OpenAI model is '{args.model}'")
         D(f"AI assistant role is '{args.role}'")
