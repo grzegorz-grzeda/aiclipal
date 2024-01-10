@@ -3,10 +3,10 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "ai-assistant"
+name = "aiclipal"
 version = "0.0.1"
 authors = [{ name = "Grzegorz Grzęda", email = "grzegorz.grzeda@g2labs.pl" }]
-description = "Compact AI assistant for your terminal. Powered by OpenAI API"
+description = "Compact AI CLI pal for your terminal. Powered by OpenAI API"
 readme = "README.md"
 requires-python = ">=3.8"
 classifiers = [
@@ -17,8 +17,8 @@ classifiers = [
 dependencies = ["vt100logging>=1.1.0"]
 
 [project.urls]
-Homepage = "https://github.com/g2labs-grzegorz-grzeda/ai-assistant"
-Issues = "https://github.com/g2labs-grzegorz-grzeda/ai-assistant/issues"
+Homepage = "https://github.com/g2labs-grzegorz-grzeda/aiclipal"
+Issues = "https://github.com/g2labs-grzegorz-grzeda/aiclipal/issues"
 
 [project.scripts]
-ai-assistant = "ai-assistant:ai_assistant_main"
+"aiclipal" = "aiclipal:ai_cli_pal_main"
